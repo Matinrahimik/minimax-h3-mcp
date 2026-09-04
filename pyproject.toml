@@ -1,0 +1,37 @@
+[project]
+name = "minimax-h3-mcp"
+version = "0.1.0"
+description = "HomeBooks stdio MCP server for MiniMax H3 / H3-Max video (official V2 API)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "HomeBooks" }]
+keywords = ["minimax", "h3", "mcp", "video-generation"]
+dependencies = [
+    "mcp>=2.0.0,<3",
+    "httpx>=0.28.1",
+    "pydantic>=2.6",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+]
+
+[project.scripts]
+minimax-h3 = "minimax_h3.server:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["minimax_h3*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-q"
+asyncio_mode = "auto"
+filterwarnings = ["ignore::DeprecationWarning"]
