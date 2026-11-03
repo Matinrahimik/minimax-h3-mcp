@@ -4,7 +4,7 @@
 
 MiniMax H3 video generation for AI assistants
 
-This lets AI assistants in chat apps and code editors make short videos from a text description, using MiniMax H3. You type something like "make a 5 second video of a lake at sunrise" and the assistant gives you back a video. It is for anyone who wants that video step in an assistant they already use. You need your own MiniMax API key. MCP is a standard plug that lets AI assistants use outside tools.
+minimax-h3-mcp connects AI assistants such as chat applications and code editors to MiniMax's H3 video models through the Model Context Protocol (MCP), an open standard that allows assistants to use external tools. Once installed, you can ask your assistant for something like "Create a 5 second video of a lake at sunrise," and it returns a finished video clip. It is designed for creators, marketers, and teams who want to produce short videos from the assistant they already use. To get started, you need your own MiniMax API key.
 
 stdio MCP server for **MiniMax-H3** and **MiniMax-H3-Max** video generation. It talks only to the official MiniMax V2 endpoints. It does not wrap or replace the Hailuo `minimax-mcp` package (T2V-01 / I2V-01).
 
