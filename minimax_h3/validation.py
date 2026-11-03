@@ -362,7 +362,7 @@ def validate_create(
     if duration not in allowed_dur:
         lo, hi = min(allowed_dur), max(allowed_dur)
         raise ValidationError(
-            f"duration {duration} is not valid for {model} (allowed: {lo}–{hi})"
+            f"duration {duration} is not valid for {model} (allowed: {lo}-{hi})"
         )
 
     if ratio is not None and ratio not in RATIOS:

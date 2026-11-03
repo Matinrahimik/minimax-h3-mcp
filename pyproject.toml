@@ -1,11 +1,11 @@
 [project]
 name = "minimax-h3-mcp"
 version = "0.1.0"
-description = "HomeBooks stdio MCP server for MiniMax H3 / H3-Max video (official V2 API)."
+description = "stdio MCP server for MiniMax H3 / H3-Max video generation (official V2 API)."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-authors = [{ name = "HomeBooks" }]
+authors = [{ name = "Matin Rahimi" }]
 keywords = ["minimax", "h3", "mcp", "video-generation"]
 dependencies = [
     "mcp>=2.0.0,<3",

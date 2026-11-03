@@ -9,6 +9,7 @@ dist/
 build/
 .env
 .env.*
+!.env.example
 minimax-h3-output/
 *.mp4
 .DS_Store
