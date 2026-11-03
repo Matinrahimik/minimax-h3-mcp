@@ -3,10 +3,12 @@
 
 Does not hardcode an agent id. Secret resolution:
 
-1. ``MINIMAX_API_KEY`` already in the environment
-2. ``/home/box/agent-data/connector-secrets/<id>/minimax.json`` when
+1. ``.env`` next to this file (does not override existing env vars)
+2. ``MINIMAX_API_KEY`` already in the environment
+3. ``MINIMAX_API_KEY_FILE`` (JSON ``{"api_key":"..."}`` or a one-line key file)
+4. ``MINIMAX_CONNECTOR_SECRETS_ROOT/<id>/minimax.json`` when
    ``MINIMAX_AGENT_ID`` is set (field ``api_key``)
-3. any ``.../connector-secrets/*/minimax.json`` with ``api_key``
+5. any ``MINIMAX_CONNECTOR_SECRETS_ROOT/*/minimax.json`` with ``api_key``
 """
 
 from __future__ import annotations

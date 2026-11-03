@@ -87,6 +87,17 @@ async def test_get_and_wait_tools(mock_api, tmp_path: Path) -> None:
     assert Path(wait_data["path"]).exists()
 
 
+def test_import_and_list_tools_without_live_http() -> None:
+    import minimax_h3
+    import minimax_h3.server as server
+    from minimax_h3.config import Settings
+
+    assert minimax_h3.__version__
+    settings = Settings.from_env()
+    assert settings.test_mode is True
+    assert server._injected_client is None
+
+
 def test_does_not_import_hailuo_package() -> None:
     import minimax_h3.server as server
 
